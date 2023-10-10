@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 12vmin;
   pointer-events: none;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #afc6f3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.game{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+
+.gridContainer {
+  justify-content: center;
+  align-content: center;
+  width: 7em;
+  height:7em;
+  display: grid;
+  grid-template: repeat(3, 30%) / repeat(3, 30%);
+  gap: 0px;
+  padding: 9px auto;
+  margin: 9px auto;
+  overflow: hidden;
+  border: 1em solid rgb(255, 238, 255);
+
+}
+
+.gridItem {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  text-align: center;
+  flex-shrink: 3;
+
+}
+
+.square {
+  background: rgb(255, 245, 238);
+  border: 1px solid #362e36;
+  /* float: left; */
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  /* height: 40px; */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  /* width: 40px; */
 }
