@@ -112,10 +112,13 @@ export default function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Play Noughts and Crosses with me
+           Noughts and Crosses
         </p>
+        </header>
+        <main className="App-main">
+
         <Game />
-      </header>
+      </main>
     </div>
   );
 }

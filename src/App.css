@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: #afc6f3;
+  background-color: #cfe0d4;
+  color: #5e4949;
+  font-size: calc(10px + 2vmin);
 
 }
 
@@ -15,15 +19,27 @@
 }
 
 .App-header {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: auto;
+  
+}
+
+.App-main {
   background-color: #afc6f3;
   background-color: #cfe0d4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: #5e4949;
+  margin: auto;
 }
 
 .App-link {
@@ -39,28 +55,33 @@
   }
 }
 
+.status{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .game{
   display: flex;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1%;
   border: 1em solid rgb(255, 245, 238)
 }
 
-
 .gridContainer {
   justify-content: center;
   align-content: center;
-  width: 7em;
-  height:7em;
+  width: 200px;
+  height: 200px;
   display: grid;
   grid-template: repeat(3, 30%) / repeat(3, 30%);
   gap: 0px;
   padding: 9px auto;
   margin: 9px auto;
   overflow: hidden;
-  /* border: 1em solid rgb(255, 238, 255); */
-
 }
 
 .gridItem {
@@ -68,20 +89,30 @@
   border: 1px solid var(--primary);
   text-align: center;
   flex-shrink: 3;
-
 }
 
 .square {
   background: rgb(255, 245, 238);
   border: 1px solid #362e36;
-  /* float: left; */
   font-size: 24px;
   font-weight: bold;
   line-height: 40px;
-  /* height: 40px; */
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  /* width: 40px; */
+}
+
+
+@media (min-width: 400px){
+  .App-header {
+    padding: 3rem;
+  }
+  
+}
+@media (min-width: 550px){
+  .game{
+   width: 400px;
+   flex-direction: row;
+  }
 }
